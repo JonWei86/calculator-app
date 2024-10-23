@@ -1,6 +1,7 @@
 const numBtns = document.querySelectorAll('.number-btn')
 const opBtns = document.querySelectorAll('.operator-btn')
 const equalsBtn = document.querySelector('#equals-btn')
+const clearBtn = document.querySelector('#clear-btn')
 const screen = document.querySelector('.screen')
 
 let current = ""
@@ -40,4 +41,11 @@ equalsBtn.addEventListener('click',()=>{
         screen.innerHTML =`${firstNum}${operator}${current} = ${solution}`
         current = solution
         operator = ""
+})
+
+clearBtn.addEventListener('click',()=>{
+    screen.innerHTML = ''
+    current = ''
+    operator = ''
+    firstNum = ''
 })
